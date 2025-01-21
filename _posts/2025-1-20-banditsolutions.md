@@ -6,99 +6,73 @@ title: Bandit Solutions!
 Note: The level names come from the first part of the level name, for example, 0-1 would be level 0.  
 ***Level 0*** 
 ssh bandit0@bandit.labs.overthewire.org -p 2220
-
 cat readme  
 exit  
-
 ***Level 1*** 
 ssh bandit1@bandit.labs.overthewire.org -p 2220
-
 cat <-  
 exit  
-
 ***Level 2*** 
 ssh bandit2@bandit.labs.overthewire.org -p 2220
-
 cat "spaces in this filename"  
 exit  
-
 ***Level 3*** 
 ssh bandit3@bandit.labs.overthewire.org -p 2220
-
 cd inhere  
 find  
 cat ./...Hiding-From-You  
 exit  
-
 ***Level 4*** 
 ssh bandit4@bandit.labs.overthewire.org -p 2220
-
 cd inhere  
 ls -ah  
 cat <-file07  
 exit  
-
 ***Level 5*** 
 ssh bandit5@bandit.labs.overthewire.org -p 2220
-
 cd inhere  
 du  
 cd .  
 du -ab  
 cat ./maybehere07/.file2  
 exit  
-
 ***Level 6*** 
 ssh bandit6@bandit.labs.overthewire.org -p 2220
-
 find / -user bandit7 -group bandit6 -size 33c  
 cat /var/lib/dpkg/info/bandit7.password  
 exit  
-
 ***Level 7*** 
 ssh bandit7@bandit.labs.overthewire.org -p 2220
-
 ls -ah  
 less data.txt  
 *used /millionth to search for the entry*  
 exit  
-
 ***Level 8*** 
 ssh bandit8@bandit.labs.overthewire.org -p 2220  
-
 ls -ah  
 sort data.txt | uniq -u  
 exit  
-
 ***Level 9*** 
 ssh bandit9@bandit.labs.overthewire.org -p 2220  
-
 ls -ah  
 strings data.txt  
 *Tested all of the possible options (only one seemed to fit the password pattern but was worth testing either way)*  
 exit  
-
 ***Level 10*** 
 ssh bandit10@bandit.labs.overthewire.org -p 2220
-
 ls -ah  
 man base64  
 base64 -d data.txt  
 exit  
-
 ***Level 11*** 
 ssh bandit11@bandit.labs.overthewire.org -p 2220
-
 ls -ah  
 cat data.txt  
 echo Gur cnffjbeq vf 7k16JArUVv5LxVuJfsSVdbbtaHGlw9D4 | tr 'A-Za-z' 'N-ZA-Mn-za-m'  
 exit  
-
 ***Level 12***
 *Quick note: for this level, because there were so many commands, I left the inputs and outputs as they come in the terminal*  
-
 ssh bandit12@bandit.labs.overthewire.org -p 2220
-
 bandit12@bandit:~ ls -a  
 .  ..  .bash_logout  .bashrc  data.txt  .profile  
 bandit12@bandit:~ mktemp -d  
@@ -150,33 +124,25 @@ bandit12@bandit:/tmp/tmp.puZi0T4HOb$ gzip -d data8.gz
 bandit12@bandit:/tmp/tmp.puZi0T4HOb$ file data8  
 data8: ASCII text  
 bandit12@bandit:/tmp/tmp.puZi0T4HOb$ cat data8  
-
 exit  
-
 ***Level 13*** 
 ssh bandit13@bandit.labs.overthewire.org -p 2220  
-
 ls  
 ssh -i sshkey.private bandit14@localhost -p 2220  
 cd /etc/bandit_pass  
 cat bandit14  
-
 ***Level 14*** 
 telnet localhost 30000  
 *enter password here*  
 exit  
 exit  
-
 ***Level 15*** 
 ssh bandit15@bandit.labs.overthewire.org -p 2220  
-
 openssl s_client -connect localhost:30001  
 *enter password here*  
 exit  
-
 ***Level 16*** 
 ssh bandit16@bandit.labs.overthewire.org -p 2220  
-
 nmap  
 nmap -p 31000-32000 localhost  
 openssl s_client -connect localhost:31790   
@@ -189,27 +155,21 @@ nano /tmp/sshkey17.private
 chmod 700 /tmp/sshkey17.private  
 ls -l /tmp/sshkey17.private  
 ssh -i /tmp/sshkey17.private bandit17@localhost -p 2220  
-
 ***Level 17*** 
 diff passwords.old passwords.new  
 *We want the one with the > in front of it, paste it into level 18 and if you get bye bye, move on from there*  
-
 ***Level 18*** 
 ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme  
 *That's all*
-
 ***Level 19*** 
 ssh bandit19@bandit.labs.overthewire.org -p 2220
-
 ls -ah  
 ./bandit20-do  
 ./bandit20-do whoami  
 ./bandit20-do cat /etc/bandit_pass/bandit20  
 exit  
-
 ***Level 20*** 
 ssh bandit20@bandit.labs.overthewire.org -p 2220  
-
 ls -ah  
 echo "0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO" | nc -l localhost 12345 &  
 ./suconnect 12345  
