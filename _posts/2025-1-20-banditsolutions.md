@@ -5,31 +5,31 @@ title: Bandit Solutions!
 *This is documentation for completing bandit levels 0-20*  
 Note: The level names come from the first part of the level name, for example, 0-1 would be level 0.  
 ***Level 0*** 
-ssh bandit0@bandit.labs.overthewire.org -p 2220
+ssh bandit0@bandit.labs.overthewire.org -p 2220  
 cat readme  
 exit  
 ***Level 1*** 
-ssh bandit1@bandit.labs.overthewire.org -p 2220
+ssh bandit1@bandit.labs.overthewire.org -p 2220  
 cat <-  
 exit  
 ***Level 2*** 
-ssh bandit2@bandit.labs.overthewire.org -p 2220
+ssh bandit2@bandit.labs.overthewire.org -p 2220  
 cat "spaces in this filename"  
 exit  
 ***Level 3*** 
-ssh bandit3@bandit.labs.overthewire.org -p 2220
+ssh bandit3@bandit.labs.overthewire.org -p 2220  
 cd inhere  
 find  
 cat ./...Hiding-From-You  
 exit  
 ***Level 4*** 
-ssh bandit4@bandit.labs.overthewire.org -p 2220
+ssh bandit4@bandit.labs.overthewire.org -p 2220  
 cd inhere  
 ls -ah  
 cat <-file07  
 exit  
 ***Level 5*** 
-ssh bandit5@bandit.labs.overthewire.org -p 2220
+ssh bandit5@bandit.labs.overthewire.org -p 2220  
 cd inhere  
 du  
 cd .  
@@ -42,7 +42,7 @@ find / -user bandit7 -group bandit6 -size 33c
 cat /var/lib/dpkg/info/bandit7.password  
 exit  
 ***Level 7*** 
-ssh bandit7@bandit.labs.overthewire.org -p 2220
+ssh bandit7@bandit.labs.overthewire.org -p 2220  
 ls -ah  
 less data.txt  
 *used /millionth to search for the entry*  
@@ -59,20 +59,20 @@ strings data.txt
 *Tested all of the possible options (only one seemed to fit the password pattern but was worth testing either way)*  
 exit  
 ***Level 10*** 
-ssh bandit10@bandit.labs.overthewire.org -p 2220
+ssh bandit10@bandit.labs.overthewire.org -p 2220  
 ls -ah  
 man base64  
 base64 -d data.txt  
 exit  
 ***Level 11*** 
-ssh bandit11@bandit.labs.overthewire.org -p 2220
+ssh bandit11@bandit.labs.overthewire.org -p 2220  
 ls -ah  
 cat data.txt  
 echo Gur cnffjbeq vf 7k16JArUVv5LxVuJfsSVdbbtaHGlw9D4 | tr 'A-Za-z' 'N-ZA-Mn-za-m'  
 exit  
 ***Level 12***
 *Quick note: for this level, because there were so many commands, I left the inputs and outputs as they come in the terminal*  
-ssh bandit12@bandit.labs.overthewire.org -p 2220
+ssh bandit12@bandit.labs.overthewire.org -p 2220  
 bandit12@bandit:~ ls -a  
 .  ..  .bash_logout  .bashrc  data.txt  .profile  
 bandit12@bandit:~ mktemp -d  
@@ -162,7 +162,7 @@ diff passwords.old passwords.new
 ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme  
 *That's all*
 ***Level 19*** 
-ssh bandit19@bandit.labs.overthewire.org -p 2220
+ssh bandit19@bandit.labs.overthewire.org -p 2220  
 ls -ah  
 ./bandit20-do  
 ./bandit20-do whoami  
