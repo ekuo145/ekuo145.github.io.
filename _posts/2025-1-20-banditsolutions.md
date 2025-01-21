@@ -4,7 +4,6 @@ title: Bandit Solutions!
 ---
 *This is documentation for completing bandit levels 0-20*  
 Note: The level names come from the first part of the level name, for example, 0-1 would be level 0.  
-
 ***Level 0*** 
 ssh bandit0@bandit.labs.overthewire.org -p 2220
 
