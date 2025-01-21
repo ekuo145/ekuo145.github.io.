@@ -100,12 +100,12 @@ exit
 
 ssh bandit12@bandit.labs.overthewire.org -p 2220
 
-bandit12@bandit:~$ ls -a  
+bandit12@bandit:~ ls -a  
 .  ..  .bash_logout  .bashrc  data.txt  .profile  
-bandit12@bandit:~$ mktemp -d  
+bandit12@bandit:~ mktemp -d  
 /tmp/tmp.puZi0T4HOb  
-bandit12@bandit:~$ cp data.txt /tmp/tmp.puZi0T4HOb  
-bandit12@bandit:~$ cd /tmp/tmp.puZi0T4HOb  
+bandit12@bandit:~ cp data.txt /tmp/tmp.puZi0T4HOb  
+bandit12@bandit:~ cd /tmp/tmp.puZi0T4HOb  
 bandit12@bandit:/tmp/tmp.puZi0T4HOb$ ls -ah  
 .  ..  data.txt  
 bandit12@bandit:/tmp/tmp.puZi0T4HOb$ file data.txt  
@@ -193,7 +193,7 @@ ssh -i /tmp/sshkey17.private bandit17@localhost -p 2220
 
 ***Level 17*** 
 diff passwords.old passwords.new  
-*We want the one with the > in front of it, paste it in and get bye bye, move on from there*  
+*We want the one with the > in front of it, paste it into level 18 and if you get bye bye, move on from there*  
 
 ***Level 18*** 
 ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme  
