@@ -208,7 +208,7 @@ chmod 777 -R /tmp/123456
 cp script.sh /var/spool/bandit24/foo  
 cat password  
 exit  
-#Level 24  
+***Level 24***  
 ssh bandit24@bandit.labs.overthewire.org -p 2220  
 mkdir -p /tmp/123456  
 cd /tmp/123456  
@@ -230,8 +230,8 @@ done
 touch out.txt  
 ./script.sh  
 less out.txt  
-#Ran Overnight, was taking a long time to finish  
-#Level 25  
+*Ran Overnight, was taking a long time to finish*  
+***Level 25***   
 ssh bandit25@bandit.labs.overthewire.org -p 2220  
 ssh -i bandit26.sshkey bandit26@localhost -p 2220 *Doesn't work right yet*   
 cat /etc/passwd | grep bandit26  
@@ -320,6 +320,6 @@ $0
 ls -lah  
 whoami  
 cat /etc/bandit_pass/bandit33  
-***THE END***
-***Level 33***
+***THE END***  
+***Level 33***  
 *At this moment, level 33->34 does not exist yet.*
